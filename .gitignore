@@ -4,6 +4,7 @@ target/
 !**/src/test/**/target/
 .kotlin
 
+.github
 .env
 .env.dev
 ### IntelliJ IDEA ###
