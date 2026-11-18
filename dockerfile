@@ -19,7 +19,7 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 
 # Copia o JAR gerado pelo Maven
-COPY --from=build /app/target/growth-map-1.0-SNAPSHOT-jar-with-dependencies.jar ./app.jar
+COPY --from=build /app/target/poc-excel-mysql-1.0-SNAPSHOT-jar-with-dependencies.jar ./app.jar
 
 # Executa a aplicação
 ENTRYPOINT ["java", "-jar", "app.jar"]
