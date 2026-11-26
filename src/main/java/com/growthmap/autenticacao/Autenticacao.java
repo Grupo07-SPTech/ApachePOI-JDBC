@@ -13,7 +13,7 @@ public class Autenticacao {
     public Integer autenticar(String email, String senha) {
         try {
             return banco.queryForObject(
-                    "SELECT id FROM usuario WHERE email = ? AND senha_hash = ?",
+                    "SELECT id FROM usuario WHERE email = ? AND senha = ?",
                     Integer.class, email, senha);
         } catch (EmptyResultDataAccessException e) {
             return null;
