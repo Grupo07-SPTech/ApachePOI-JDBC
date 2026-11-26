@@ -15,8 +15,14 @@ public class Conexao {
         driver.setUrl(System.getenv("DB_URL"));
         driver.setDriverClassName("com.mysql.cj.jdbc.Driver");
 
-        this.conexao = driver;
+        this.conexao = driver
+    try {
+        driver.getConnection().close();
+        System.out.println("Conexao com MySQL estabelecida!");
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+ }
 
     public DataSource getConexao() {
         return this.conexao;
