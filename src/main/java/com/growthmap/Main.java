@@ -77,6 +77,7 @@ public class Main {
             }
         } catch (Exception e) {
             System.out.println("Erro: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }
